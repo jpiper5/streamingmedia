@@ -1,0 +1,358 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+:root {
+    --body-fonts: "Verdana", "Geneva", "Tahoma", sans-serif;
+}
+html {
+    background-color: #020659;
+    box-sizing: border-box;
+}
+body {
+    width: 843px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    font-family: var(--body-fonts);
+    font-size: 1em;
+}
+header {
+   background: linear-gradient(0.25turn, #2104D9, #020659, #000000);
+   color: #ffffff;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+h1 {
+    font-size: 1.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 35px;
+    order: 2;
+}
+header p {
+    font-size: 1em;
+    padding: 5px 35px 20px;
+    line-height: 1.2;
+    order: 3;
+}
+nav {
+    background-color: #030a8c;
+    order: 1;
+}
+nav h2 {
+    visibility: hidden;
+    height: 1px;
+    padding: 0px;
+}
+nav a {
+    text-decoration: none;
+}
+nav a:visited {
+    color: #ffffff;
+}
+ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    width: 100%;
+    text-align: center;
+}
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+ul li{
+    text-transform: uppercase;
+    max-width: 100%;
+}
+ul li:first-child {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    font-variant: small-caps;
+    font-size: 1.75em;
+    font-weight: bold;
+    color: #ffffff;
+    width: 100%;
+    display: flex;
+}
+h2 {
+    color: #590242;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 40px;
+    padding-bottom: 5px;
+    padding-top: 30px;
+}
+.scroll {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+.scroll section {
+    margin: 10px;
+    position: relative;
+}
+.scroll div {
+    position: absolute;
+    top: 251px;
+    background-color: rgba(255, 255, 255, .75);
+    padding: 5px;
+    height: 50px;
+    width: 350px;
+}
+#trending h3 {
+    font-weight: bold;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #590242;
+    line-height: 1.75;
+}
+dl {
+    display: flex;
+    color: #590242;
+    
+}
+dt {
+    padding-right: 5px;
+    color: #590242;
+    font-style: italic;
+}
+audio {
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+.btn {
+    text-decoration: none;
+    background-color: #590242;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 150px;
+    display: block;
+    text-align: center;
+    margin: 10px 0 30px 32px;
+}
+.more:hover {
+    background-color: #020659;
+}
+audio::-webkit-media-controls-mute-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-play-button {
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(255, 255, 255, .75);
+}
+#trending ::-webkit-scrollbar {
+    width: 15px;
+}
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+}
+#trending ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 5px;
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    width: 15px;
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #020659;
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background:#020659;
+    border-radius: 5px;
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+#playlists .scroll {
+    background-color: #2699FB;
+}
+#playlists section {
+    background-color: #0D8DFB;
+}
+#curated .scroll {
+    background-color: #030873;
+}
+#curated section {
+    background-color: #020659;
+}
+#playlists img {
+    padding: 10px 10px 0;
+}
+#playlists h3, #curated h3 {
+    color:#ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 10px;
+}
+#playlists p, #curated p {
+    color: #ffffff;
+    text-align: center;
+    padding: 0 10px 5px;
+}
+footer p {
+    font-size: .75em;
+    color: #590242;
+    text-align: center;
+}
+@media screen and (min-width:834px) {
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    label span, input {
+        display: none;
+    }
+    #trending {
+        margin-bottom: 70px;
+    }
+    .btn {
+        float: right;
+    }
+    #playlists {
+        display: flex;
+        flex-direction: column;
+    }
+    #curated {
+        display: flex;
+        flex-direction: column;
+    }
+    #playlists > .scroll {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        height: 400px;
+        max-width: 50%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .scroll section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    section img {
+        grid-row: 1/-1;
+    }
+    section h3 {
+        padding-top: 10px;
+    }
+    section p{
+        grid-column: 2/3;
+        text-align: center;
+    }
+    #curated > .scroll {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        height: 400px;
+        max-width: 50%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
