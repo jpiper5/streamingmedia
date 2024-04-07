@@ -54,7 +54,6 @@ html {
     box-sizing: border-box;
 }
 body {
-    width: 843px;
     margin: 0 auto;
     background-color: #ffffff;
     font-family: var(--body-fonts);
